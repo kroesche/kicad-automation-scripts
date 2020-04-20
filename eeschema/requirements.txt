@@ -1,4 +1,4 @@
 xvfbwrapper==0.2.9
 argparse==1.4.0
 psutil==5.7.0
-
+kicost==1.1.4
