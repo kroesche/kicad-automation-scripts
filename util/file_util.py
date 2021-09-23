@@ -18,10 +18,10 @@ def mkdir_p(path):
         else:
             raise
 
-def wait_for_file_created_by_process(pid, file, timeout=5):
+def wait_for_file_created_by_process(pid, file, timeout=20):
     process = psutil.Process(pid)
 
-    DELAY = 0.05
+    DELAY = 1
     for i in range(int(timeout/DELAY)):
         if os.path.isfile(file):
             if file in process.open_files():
